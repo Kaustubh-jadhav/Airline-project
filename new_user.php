@@ -60,10 +60,13 @@
 					<td>Enter your name  </td>
 					<td><input type="text" name="name" required><br><br></td>
 				</tr>
+
+
 				<tr>
 					<td>Enter your phone no.</td>
 					<td><input type="text" name="phone_no" required><br><br></td>
 				</tr>
+				
 				<tr>
 					<td>Enter your address</td>
 					<td><input type="text" name="address" required><br><br></td>

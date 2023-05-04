@@ -4,6 +4,14 @@
 	</head>
 	<body>
 		<?php
+
+function validating($phone){
+	if(preg_match('/^[0-9]{10}+$/', $phone)) {
+	echo " Valid Phone Number";
+	} else {
+	echo " Invalid Phone Number";die;
+	}
+	}
 			if(isset($_POST['Submit']))
 			{
 				$data_missing=array();
@@ -47,6 +55,8 @@
 				else
 				{
 					$phone_no=trim($_POST['phone_no']);
+					validating($phone_no);
+
 				}
 				if(empty($_POST['address']))
 				{
