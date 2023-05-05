@@ -9,7 +9,9 @@ function validating($phone){
 	if(preg_match('/^[0-9]{10}+$/', $phone)) {
 	echo " Valid Phone Number";
 	} else {
-	echo " Invalid Phone Number";die;
+	echo "<br>
+	<strong style='color:red'>Invalid number</strong>
+	<br><br>";die;
 	}
 	}
 			if(isset($_POST['Submit']))
