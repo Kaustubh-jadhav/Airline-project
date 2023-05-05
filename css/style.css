@@ -13,14 +13,9 @@ h1{
     width: 55px;
     padding: 10px;
 }
-  .float_form{
-	float: center;
-	/* display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100vh; */
-}  
+.float_form{
+	float: left;
+}
 .center_form{
 	float: center;
 }

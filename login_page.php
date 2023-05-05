@@ -21,14 +21,12 @@
 			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" type="text/css" href="css/edit.css"/>
-		
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
 	</head>
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			CHAMPION AIRLINES
+			Kaustubh AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -42,7 +40,7 @@
 		<br>
 		<br>
 		<br>
-		<form class="float_form edit-form" style="padding-left:80px;" action="login_handler.php" method="POST">
+		<form class="float_form" style="padding-left: 40px" action="login_handler.php" method="POST">
 			<fieldset>
 				<legend>Login Details:-</legend>
 				<strong>Username:</strong><br>

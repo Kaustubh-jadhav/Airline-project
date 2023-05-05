@@ -5,20 +5,13 @@
 	<body>
 		<?php
 
-function validating($phone)
-{
-	if(preg_match('/^[0-9]{10}+$/', $phone)) 
-	{
-	echo "<br>
-	<strong style='color:green'>valid </strong>
-	<br><br>";
-	} else 
-	{
-	echo "<br>
-	<strong style='color:red'>invalid</strong>
-	<br><br>"die;
+function validating($phone){
+	if(preg_match('/^[0-9]{10}+$/', $phone)) {
+	echo " Valid Phone Number";
+	} else {
+	echo " Invalid Phone Number";die;
 	}
-}
+	}
 			if(isset($_POST['Submit']))
 			{
 				$data_missing=array();
