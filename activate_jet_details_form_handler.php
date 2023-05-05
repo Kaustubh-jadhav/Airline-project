@@ -6,6 +6,7 @@
 		<title>Activate Aircraft</title>
 	</head>
 	<body>
+	
 		<?php
 			if(isset($_POST['Activate']))
 			{

@@ -23,7 +23,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>

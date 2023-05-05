@@ -27,12 +27,13 @@
 			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/container.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
 	</head>
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -42,9 +43,10 @@
 				<li><a href="home_page.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
 				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 			</ul>
-		</div>
-		<h2>AVAILABLE FLIGHTS</h2>
-		<?php
+		</div>	
+
+			<h2>AVAILABLE FLIGHTS</h2>
+			<?php
 			if(isset($_POST['Search']))
 			{
 				$data_missing=array();
@@ -81,7 +83,7 @@
 				{
 					$no_of_pass=trim($_POST['no_of_pass']);
 				}
-
+				
 				if(empty($_POST['class']))
 				{
 					$data_missing[]='Class';
@@ -126,7 +128,7 @@
 							<th>Select</th>
 							</tr>";
 							while(mysqli_stmt_fetch($stmt)) {
-        						echo "<tr>
+								echo "<tr>
         						<td>".$flight_no."</td>
         						<td>".$from_city."</td>
 								<td>".$to_city."</td>
@@ -147,7 +149,7 @@
 					{
 						$query="SELECT flight_no,from_city,to_city,departure_date,departure_time,arrival_date,arrival_time,price_business FROM flight_details where from_city='$origin' and to_city='$destination' and departure_date='$dep_date' and seats_business>='$no_of_pass' ORDER BY  departure_time";
 						$stmt=mysqli_prepare($dbc,$query);
-					//	mysqli_stmt_bind_param($stmt,"sssi",$origin,$destination,$destination,$no_of_pass);
+						//	mysqli_stmt_bind_param($stmt,"sssi",$origin,$destination,$destination,$no_of_pass);
 						mysqli_stmt_execute($stmt);
 						mysqli_stmt_bind_result($stmt,$flight_no,$from_city,$to_city,$departure_date,$departure_time,$arrival_date,$arrival_time,$price_business);
 						mysqli_stmt_store_result($stmt);
@@ -170,7 +172,7 @@
 							<th>Select</th>
 							</tr>";
 							while(mysqli_stmt_fetch($stmt)) {
-        						echo "<tr>
+								echo "<tr>
         						<td>".$flight_no."</td>
         						<td>".$from_city."</td>
 								<td>".$to_city."</td>
@@ -191,23 +193,24 @@
 					mysqli_close($dbc);
 					// else
 					// {
-					// 	echo "Submit Error";
-					// 	echo mysqli_error();
-					// }
-				}
-				else
-				{
-					echo "The following data fields were empty! <br>";
-					foreach($data_missing as $missing)
+						// 	echo "Submit Error";
+						// 	echo mysqli_error();
+						// }
+					}
+					else
 					{
-						echo $missing ."<br>";
+						echo "The following data fields were empty! <br>";
+						foreach($data_missing as $missing)
+						{
+							echo $missing ."<br>";
+						}
 					}
 				}
-			}
 			else
 			{
 				echo "Search request not received";
 			}
-		?>
+			?>
 	</body>
-</html>
+	</html>
+	

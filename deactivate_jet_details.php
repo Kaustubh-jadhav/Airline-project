@@ -7,6 +7,24 @@
 			Deactivate Aircraft
 		</title>
 		<style>
+			.container{
+				/* border:10px solid gray; */
+				max-width:800px;
+				margin:auto;
+				height:50vh;
+				
+
+				display:block;
+				align-items:center;
+				justify-content:center;
+
+				position:absolute;
+				right:0;
+				left:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+			}
 			input {
     			border: 1.5px solid #030337;
     			border-radius: 4px;
@@ -26,7 +44,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -35,34 +53,36 @@
 				<li><a href="home_page.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 			</ul>
 		</div>
-		<form action="deactivate_jet_details_form_handler.php" method="post">
-			<h2>ENTER THE AIRCRAFT TO BE DEACTIVATED</h2>
-			<div>
-			<?php
+		<div class="container">
+
+			<form action="deactivate_jet_details_form_handler.php" method="post">
+				<h2>ENTER THE AIRCRAFT TO BE DEACTIVATED</h2>
+				<div>
+					<?php
 				if(isset($_GET['msg']) && $_GET['msg']=='success')
 				{
 					echo "<strong style='color: green'>The Aircraft has been successfully deactivated.</strong>
-						<br>
-						<br>";
+					<br>
+					<br>";
 				}
 				else if(isset($_GET['msg']) && $_GET['msg']=='failed')
 				{
 					echo "<strong style='color:red'>*Invalid Jet ID entered, please enter again.</strong>
-						<br>
-						<br>";
+					<br>
+					<br>";
 				}
-			?>
+				?>
 			<table cellpadding="5" style="padding-left: 20px;">
 				<tr>
 					<td class="fix_table">Enter a valid Jet ID</td>
-				</tr>
-				<tr>
+				
 					<td class="fix_table"><input type="text" name="jet_id" required></td>
 				</tr>
 			</table>
 			<br>
 			<input type="submit" value="Deactivate" name="Deactivate">
-			</div>
-		</form>
-	</body>
+		</div>
+	</form>
+</div>
+</body>
 </html>

@@ -32,12 +32,14 @@
 			}
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/container.css"/>
+
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
 	</head>
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -48,8 +50,10 @@
 				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 			</ul>
 		</div>
-		<h2>VIEW BOOKED FLIGHT TICKETS</h2>
-		<h3 class='set_nice_size'><center><u>Upcoming Trips</u></center></h3>
+		<div class="container">
+		<h2><center>VIEW BOOKED FLIGHT TICKETS</center> </h2>
+		<br>	
+		<h3 class='set_nice_size'><u><center><u>Upcoming Trips</u></center></h3>
 		<?php
 			$todays_date=date('Y-m-d');
 			$thirty_days_before_date=date_create(date('Y-m-d'));
@@ -135,5 +139,6 @@
 			mysqli_stmt_close($stmt);
 			mysqli_close($dbc);
 		?>
+		</div>
 	</body>
 </html>

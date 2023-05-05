@@ -7,6 +7,28 @@
 			Account Login
 		</title>
 		<style>
+			section{
+				/* border:10px solid black; */
+				height:90vh;
+			}
+			.container{
+				/* border:10px solid gray; */
+				max-width:700px;
+				margin:auto;
+				height:50vh;
+
+				display:block;
+				align-items:center;
+				justify-content:center;
+
+				position:absolute;
+				right:0;
+				left:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+			}
+
 			input {
     			border: 1.5px solid #030337;
     			border-radius: 4px;
@@ -26,7 +48,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -41,15 +63,49 @@
 		<br>
 		<br>
 		<form class="float_form" style="padding-left: 40px" action="login_handler.php" method="POST">
+		<section>
+<div class="container">
+
+		
 			<fieldset>
 				<legend>Login Details:-</legend>
-				<strong>Username:</strong><br>
-				<input type="text" name="username" placeholder="Enter your username" required><br><br>
-				<strong>Password:</strong><br>
-				<input type="password" name="password" placeholder="Enter your password" required><br><br>
-				<strong>User Type:</strong><br>
-				Customer <input type='radio' name='user_type' value='Customer' checked/> Administrator <input type='radio' name='user_type' value='Administrator'/>
+				<table cellpadding='10'>
+
+				<tr>
+					<td><strong>Username:</strong><br></td>
+					<td>
+					<input type="text" name="username" placeholder="Enter your username" required>
+					</td>
+				</tr>
+				<br><br>
+				<tr>
+					<td>
+						<strong>Password:</strong>
+					</td>
+					<td>
+						<input type="password" name="password" placeholder="Enter your password" required>
+					</td>
+				</tr>
 				<br>
+				<tr>
+					<td>
+							<strong>User Type:</strong><br>
+					</td>
+					<td>
+							<input type='radio' name='user_type' value='Customer' checked/>Customer <br> 
+					</td>
+					
+				</tr>
+				<tr>
+					<td>
+						
+					</td>
+					<td>
+						<input type='radio' name='user_type' value='Administrator'/>Administrator 
+					</td>
+				</tr>
+				<tr>
+					<td>
 				<?php
 					if(isset($_GET['msg']) && $_GET['msg']=='failed')
 					{
@@ -57,11 +113,25 @@
 						<strong style='color:red'>Invalid Username/Password</strong>
 						<br><br>";
 					}
-				?>
-				<input type="submit" name="Login" value="Login">
+				?>	
+					</td>
+				
+
+				</tr>
+				<tr>
+						<td>
+						<input type="submit" name="Login" value="Login">
+
+						</td>
+				</tr>
+				</table>
+
 			</fieldset>
+			
 			<br>
 			<a href="new_user.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Create New User Account?</a>
+			</div>
+			</section>
 		</form>
 	</body>
 </html>

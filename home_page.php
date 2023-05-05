@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>
-			Welcome to Kaustubh Airlines
+			Welcome to CHAMPION Airlines
 		</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
@@ -12,7 +12,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -54,8 +54,8 @@
 			</ul>
 		</div>
 		<div class="container">
-			<div class="welcome_text">Welcome to Kaustubh Airlines!</div>
-			<img src="images/shutterstock_1.jpg" width=100%>
+			<div class="welcome_text">Welcome to CHAMPION Airlines!</div>
+			<img src="images/champion.jpg" width=100%>
 		</div>
 		<!--check out addling local host in links and other places
 

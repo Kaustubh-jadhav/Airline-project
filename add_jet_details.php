@@ -7,6 +7,23 @@
 			Add Aircrafts Details
 		</title>
 		<style>
+			.container{
+				/* border:10px solid gray; */
+				max-width:700px;
+				margin:auto;
+				height:50vh;
+
+				display:block;
+				align-items:center;
+				justify-content:center;
+
+				position:absolute;
+				right:0;
+				left:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+			}
 			input {
     			border: 1.5px solid #030337;
     			border-radius: 4px;
@@ -26,7 +43,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -36,8 +53,8 @@
 			</ul>
 		</div>
 		<form action="add_jet_details_form_handler.php" method="post">
-			<h2>ENTER THE AIRCRAFTS DETAILS</h2>
-			<div>
+			<div class="container">
+				<h2>ENTER THE AIRCRAFTS DETAILS</h2>
 			<?php
 				if(isset($_GET['msg']) && $_GET['msg']=='success')
 				{
@@ -50,29 +67,27 @@
 						<br><br>";
 				}
 			?>
-			<table cellpadding="5">
+			
+			<table cellpadding="10">
 				<tr>
 					<td class="fix_table">Enter a valid Jet ID</td>
-				</tr>
-				<tr>
+				
 					<td class="fix_table"><input type="text" name="jet_id" required></td>
 				</tr>
 			</table>
 			<br>
-			<table cellpadding="5">
+			<table cellpadding="10">
 				<tr>
 					<td class="fix_table">Enter the Jet Type/Model</td>
-				</tr>
-				<tr>
+				
 					<td class="fix_table"><input type="text" name="jet_type" required></td>
 				</tr>
 			</table>
 			<br>
-			<table cellpadding="5">
+			<table cellpadding="10">
 				<tr>
 					<td class="fix_table">Enter the total capacity of the Jet</td>
-				</tr>
-				<tr>
+				
 					<td class="fix_table"><input type="number" name="jet_capacity" required></td>
 				</tr>
 			</table>

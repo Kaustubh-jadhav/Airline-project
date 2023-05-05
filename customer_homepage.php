@@ -10,6 +10,22 @@
 			Welcome Customer
 		</title>
 		<style>
+			.container{
+				max-width:700px;
+				margin:auto;
+				height:50vh;
+
+				display:block;
+				align-items:center;
+				justify-content:center;
+
+				position:absolute;
+				right:0;
+				left:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+			}
 			input {
     			border: 1.5px solid #030337;
     			border-radius: 4px;
@@ -39,7 +55,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -50,7 +66,9 @@
 				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 			</ul>
 		</div>
-		<?php
+		<div class="container">
+
+			<?php
 			$username=$_SESSION['login_user'];
 			echo "<h2>Welcome ".$username."</h2>";
 			require_once('mysqli_connect.php');
@@ -66,27 +84,28 @@
 			}
 			mysqli_stmt_close($stmt);
 			mysqli_close($dbc);
-		?>
-		<table cellpadding="5">
+			?>
+		<table cellpadding="10">
 			<tr>
 				<td class="admin_func"><a href="book_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> Book Flight Tickets</a>
-				</td>
-			</tr>
-			<tr>
-				<td class="admin_func"><a href="view_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> View Booked Flight Tickets</a>
-				</td>
-			</tr>
-			<tr>
-				<td class="admin_func"><a href="cancel_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> Cancel Booked Flight Tickets</a>
-				</td>
-			</tr>
-		</table>
-		<!--Following data fields were empty!
-			...
-			
-			ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN
-			PREDEFINED LOCATION WHEN BOOKING TICKETS
-
-		-->
-	</body>
+			</td>
+		</tr>
+		<tr>
+			<td class="admin_func"><a href="view_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> View Booked Flight Tickets</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="admin_func"><a href="cancel_booked_tickets.php"><i class="fa fa-plane" aria-hidden="true"></i> Cancel Booked Flight Tickets</a>
+	</td>
+</tr>
+</table>
+</div>
+	<!--Following data fields were empty!
+	...
+	
+	ADD VIEW FLIGHT DETAILS AND VIEW JETS/ASSETS DETAILS for ADMIN
+	PREDEFINED LOCATION WHEN BOOKING TICKETS
+	
+-->
+</body>
 </html>

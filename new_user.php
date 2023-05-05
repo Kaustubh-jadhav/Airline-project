@@ -4,6 +4,23 @@
 			Create New User Account
 		</title>
 		<style>
+			.container{
+				/* border:10px solid gray; */
+				max-width:700px;
+				margin:auto;
+				height:50vh;
+
+				display:block;
+				align-items:center;
+				justify-content:center;
+
+				position:absolute;
+				right:0;
+				left:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+			}
 			input {
     			border: 1.5px solid #030337;
     			border-radius: 4px;
@@ -23,7 +40,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -35,46 +52,50 @@
 			</ul>
 		</div>
 		<br>
-		<form class="center_form" action="new_user_form_handler.php" method="POST" id="new_user_from">
-			<h2><i class="fa fa-user-plus" aria-hidden="true"></i> CREATE NEW USER ACCOUNT</h2>
-			<br>
-			<table cellpadding='10'>
-				<strong>ENTER LOGIN DETAILS</strong>
-				<tr>
-					<td>Enter a valid username  </td>
-					<td><input type="text" name="username" required><br><br></td>
-				</tr>
-				<tr>
-					<td>Enter your desired password  </td>
-					<td><input type="password" name="password" required><br><br></td>
-				</tr>
-				<tr>
-					<td>Enter your email ID</td>
-					<td><input type="text" name="email" required><br><br></td>
-				</tr>
-			</table>
-			<br>
-			<table cellpadding='10'>
-				<strong>ENTER CUSTOMER'S PERSONAL DETAILS</strong>
-				<tr>
-					<td>Enter your name  </td>
-					<td><input type="text" name="name" required><br><br></td>
-				</tr>
+		<div class="container">
 
-
-				<tr>
-					<td>Enter your phone no.</td>
-					<td><input type="text" name="phone_no" required><br><br></td>
-				</tr>
+			<form class="center_form" action="new_user_form_handler.php" method="POST" id="new_user_from">
+				<h2><i class="fa fa-user-plus" aria-hidden="true"></i> CREATE NEW USER ACCOUNT</h2>
+				<br>
+				<table cellpadding='10'>
+					<strong>ENTER LOGIN DETAILS</strong>
+					<tr>
+						<td>Enter a valid username  </td>
+						<td><input type="text" name="username" required><br><br></td>
+					</tr>
+					<tr>
+						<td>Enter your desired password  </td>
+						<td><input type="password" name="password" required><br><br></td>
+					</tr>
+					<tr>
+						<td>Enter your email ID</td>
+						<td><input type="text" name="email" required><br><br></td>
+					</tr>
+				</table>
+				<br>
+				<table cellpadding='10'>
+					<strong>ENTER CUSTOMER'S PERSONAL DETAILS</strong>
+					<tr>
+						<td>Enter your name  </td>
+						<td><input type="text" name="name" required><br><br></td>
+					</tr>
+					
+					
+					<tr>
+						<td>Enter your phone no.</td>
+						<td><input type="text" name="phone_no" required><br><br></td>
+					</tr>
 				
-				<tr>
-					<td>Enter your address</td>
-					<td><input type="text" name="address" required><br><br></td>
-				</tr>
-			</table>
-			<br>
-			<input type="submit" value="Submit" name="Submit">
-			<br>
-		</form>
-	</body>
-</html>
+					<tr>
+						<td>Enter your address</td>
+						<td><input type="text" name="address" required><br><br></td>
+					</tr>
+				</table>
+				<br>
+				<input type="submit" value="Submit" name="Submit">
+				<br>
+			</form>
+		</div>
+		</body>
+		</html>
+		

@@ -7,6 +7,23 @@
 			View Booked Tickets
 		</title>
 		<style>
+			.container{
+				/* border:10px solid gray; */
+				max-width:700px;
+				margin:auto;
+				height:50vh;
+
+				display:block;
+				align-items:center;
+				justify-content:center;
+
+				position:absolute;
+				right:0;
+				left:0;
+				top:0;
+				bottom:0;
+				margin:auto;
+			}
 			input {
     			border: 1.5px solid #030337;
     			border-radius: 4px;
@@ -32,7 +49,7 @@
 	<body>
 		<img class="logo" src="images/shutterstock_22.jpg"/> 
 		<h1 id="title">
-			Kaustubh AIRLINES
+			CHAMPION AIRLINES
 		</h1>
 		<div>
 			<ul>
@@ -41,8 +58,10 @@
 				<li><a href="logout_handler.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 			</ul>
 		</div>
-		<h2>LIST OF BOOKED TICKETS FOR THE FLIGHT</h2>
-		<?php
+		<div class="container">
+
+			<h2>LIST OF BOOKED TICKETS FOR THE FLIGHT</h2>
+			<?php
 			if(isset($_POST['Submit']))
 			{
 				$data_missing=array();
@@ -62,7 +81,7 @@
 				{
 					$departure_date=$_POST['departure_date'];
 				}
-
+				
 				if(empty($data_missing))
 				{
 					require_once('mysqli_connect.php');
@@ -87,7 +106,7 @@
 						<th>Customer ID</th>
 						</tr>";
 						while(mysqli_stmt_fetch($stmt)) {
-        					echo "<tr>
+							echo "<tr>
 							<td>".$pnr."</td>
 							<td>".$date_of_reservation."</td>
 							<td>".$class."</td>
@@ -102,23 +121,25 @@
 					mysqli_close($dbc);
 					// else
 					// {
-					// 	echo "Submit Error";
-					// 	echo mysqli_error();
-					// }
+						// 	echo "Submit Error";
+						// 	echo mysqli_error();
+						// }
+					}
+					else
+					{
+						echo "The following data fields were empty! <br>";
+						foreach($data_missing as $missing)
+						{
+							echo $missing ."<br>";
+						}
+					}
 				}
 				else
 				{
-					echo "The following data fields were empty! <br>";
-					foreach($data_missing as $missing)
-					{
-						echo $missing ."<br>";
-					}
+					echo "Submit request not received";
 				}
-			}
-			else
-			{
-				echo "Submit request not received";
-			}
 		?>
+</div>
 	</body>
-</html>
+	</html>
+	
