@@ -66,7 +66,24 @@
 					<td>Enter your phone no.</td>
 					<td><input type="text" name="phone_no" required><br><br></td>
 				</tr>
-				
+				<?php
+					// function validating($phone){
+					// 	if(preg_match('/^[0-9]{10}+$/', $phone)) {
+					// 	echo "<br>
+					// 	<strong style='color:green'>valid </strong>
+					// 	<br><br>";
+					// 	} else {
+					// 	echo "<br>
+					// 	<strong style='color:red'>invalid </strong>
+					// 	<br><br>";
+					// 	}
+					// 	}
+					// if(isset($_POST['phone_no']))
+					// {
+					// 	validating($_POST['phone_no']);
+
+					// }
+				?>
 				<tr>
 					<td>Enter your address</td>
 					<td><input type="text" name="address" required><br><br></td>
